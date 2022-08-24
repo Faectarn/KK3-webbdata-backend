@@ -25,7 +25,6 @@ const message = `CREATE TABLE IF NOT EXISTS messages
      time INT)`;
 
 db.query(room, (error) => {
-  console.log(room)
 	if (error) {
 			console.error(error.message);
 			throw error;
