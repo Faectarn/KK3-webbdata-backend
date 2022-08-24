@@ -24,7 +24,7 @@ db.connect()
 console.log("Connected to database");
 
 const room = `CREATE TABLE IF NOT EXISTS rooms
-    // (id SERIAL PRIMARY KEY,
+    (id SERIAL PRIMARY KEY,
     room_name TEXT UNIQUE)`;
 
 const message = `CREATE TABLE IF NOT EXISTS messages
