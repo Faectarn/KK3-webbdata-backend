@@ -21,7 +21,6 @@ const db = new Client({
 
 db.connect()
 
-
 console.log("Connected to database");
 
 const room = `CREATE TABLE IF NOT EXISTS rooms
@@ -44,6 +43,7 @@ const message = `CREATE TABLE IF NOT EXISTS messages
 // });
 
 db.query(room, (error) => {
+  console.log(room)
 	if (error) {
 			console.error(error.message);
 			throw error;
