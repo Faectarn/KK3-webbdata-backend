@@ -59,8 +59,8 @@ async function getRoomMessages(roomName) {
 //   });
 // }
 
-async function getRoomMessages(roomName) {
-  const SQL = "SELECT * FROM messages WHERE room_name = $1";
+async function deleteRoomMessages(roomName) {
+  const SQL = "DELETE from messages where room_name = $1";
   const result = await DB.query(SQL, [roomName]);
 
   return result.rows;
