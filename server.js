@@ -44,8 +44,6 @@ app.get('/rooms', async (req, res) => {
 })
 
 app.post('/rooms/:name', async (req, res) => {
-  console.log("got request")
-  console.log(req.params)
   const { name } = req.params;
   const rooms = await addRoom(name);
   res.send(JSON.stringify(rooms));
