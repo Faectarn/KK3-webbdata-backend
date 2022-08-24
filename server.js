@@ -22,7 +22,7 @@ const io = socketIO(server, {
   }
 });
 
-const port = process.env.port || 4000;
+const port = process.env.PORT || 80;
 
 const logger = winston.createLogger({
   format: winston.format.combine(
