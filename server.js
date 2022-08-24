@@ -17,7 +17,7 @@ const server = http.createServer(app);
 
 const io = socketIO(server, {
   cors: {
-    origin: "https://faectarn-chat-frontend.herokuapp.com/",
+    origin: "*",
     methods: ["GET", "POST", "DELETE"]
   }
 });
