@@ -1,16 +1,22 @@
 const DB = require("../database");
 
-function addRoom(roomName) {
-  const SQL = "INSERT INTO rooms (room_name) VALUES (?)";
-  return new Promise((resolve, reject) => {
-    DB.run(SQL, [roomName], (error) => {
-      if (error) {
-        console.error(error.message);
-        reject(error);
-      }
-      resolve();
-    });
-  });
+// function addRoom(roomName) {
+//   const SQL = "INSERT INTO rooms (room_name) VALUES (?)";
+//   return new Promise((resolve, reject) => {
+//     DB.run(SQL, [roomName], (error) => {
+//       if (error) {
+//         console.error(error.message);
+//         reject(error);
+//       }
+//       resolve();
+//     });
+//   });
+// }
+
+async function addRoom(roomName) {
+  const SQL = "INSERT INTO rooms (room_name) VALUES ($1)";
+    const result = await DB.query(SQL, [roomName])
+  return result.rows
 }
 
 function getRooms() {
