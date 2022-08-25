@@ -13,7 +13,7 @@ async function getRooms() {
 }
 
 async function deleteRoom(roomName) {
-  const SQL = "DELETE from rooms where room_name = ?";
+  const SQL = "DELETE from rooms where room_name = $1";
     const result = await DB.query(SQL, [roomName])
   return result.rows
 }
