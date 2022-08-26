@@ -22,7 +22,7 @@ const message = `CREATE TABLE IF NOT EXISTS messages
      username TEXT,
      room_name TEXT,
      user_id TEXT,
-     time INT)`;
+     time BIGINT)`;
 
 db.query(room, (error) => {
 	if (error) {
