@@ -5,7 +5,7 @@ const db = new Client({
     rejectUnauthorized: false,
   },
   connectionString:
-    "postgres://ruscejxpmocdav:d141272709fb5c4a106bf8c85a35ff0b56848630295dc25b7136e09b637f2c39@ec2-54-228-125-183.eu-west-1.compute.amazonaws.com:5432/detokkqskbjl4t",
+    "postgres://osucakgiksbeuf:9c0ce613e4eea6f5479c0ba076e6e3f213ba2a0ebbb1d15821c5f4c462fc764b@ec2-52-31-70-136.eu-west-1.compute.amazonaws.com:5432/dddsi8pgr4hfsg",
 });
 
 db.connect()
